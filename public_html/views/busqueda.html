@@ -181,25 +181,16 @@
                             <input type="text" class="formulario__input ticket" name="ticket" id="ticket" placeholder="000">
                             <i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
                         </div>
-                        <p class="formulario__input-error">Debes colocar un Nombre/Razón Social.</p>
+                        <p class="formulario__input-error">Coloca un No. Ticket de 5 dígitos.</p>
                     </div>
-                    <!-- Grupo: Fecha -->
-                    <div class="formulario__grupo" id="grupo__date">
-                        <label for="date" class="formulario__label">Fecha</label>
+                    <!-- Grupo: PIN -->
+                    <div class="formulario__grupo" id="grupo__pin">
+                        <label for="pin" class="formulario__label">PIN</label>
                         <div class="formulario__grupo-input">
-                            <input type="date" class="formulario__input" name="date" id="date">
+                            <input type="pin" class="formulario__input" name="pin" id="pin">
                             <i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
                         </div>
-                        <p class="formulario__input-error">Debes colocar una fecha.</p>
-                    </div>
-                    <!-- Grupo: Uso del CFDI -->
-                    <div class="formulario__grupo" id="grupo__cfdi">
-                        <label for="cfdi" class="formulario__label">CFDI</label>
-                        <div class="formulario__grupo-input">
-                            <input type="cfdi" class="formulario__input" name="cfdi" id="cfdi">
-                            <i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
-                        </div>
-                        <p class="formulario__input-error">Debes colocar una fecha.</p>
+                        <p class="formulario__input-error">Coloca un PIN de 3 dígitos.</p>
                     </div>
                 </div>
                 <input type="submit" value="Crear" class="btn-access solid">
@@ -222,5 +213,7 @@
     <script src="/Assets/vendor/jquery/jquery-3.2.1.min.js"></script>
     <script src="/Assets/vendor/animsition/js/animsition.min.js"></script>
     <script src="/Assets/js/main.js"></script>
+    <script src="/Assets/js/formSearch.js"></script>
+    <script src="/Assets/js/plugins/sweetalert2.all.min.js"></script>
 </body>
 </html>

@@ -101,7 +101,41 @@ INPUTSNEW.forEach((inputs) => {
 
 FORMNEW.addEventListener('submit', (e) => {
     e.preventDefault();
-    if (camposNew.nrs && camposNew.rfcc && camposNew.cp && camposNew.passwordd && camposNew.password2 && camposNew.email) {
-        FORMNEW.reset();
+    // if (camposNew.nrs && camposNew.rfcc && camposNew.cp && camposNew.passwordd && camposNew.password2 && camposNew.email) {
+    //     FORMNEW.reset();
+    // }
+    var strNRS = document.querySelector('#nrs').value;
+    var strRFCC = document.querySelector('#rfcc').value;
+    var strCP = document.querySelector('#cp').value;
+    var strPASSWORDD = document.querySelector('#passwordd').value;
+    var strEMAIL = document.querySelector('#email').value;
+
+    if (strNRS && strRFCC && strCP && strPASSWORDD && strEMAIL) {
+    Swal.fire({
+        title: "Éxito",
+        text: "Los campos han sido registrados.",
+        icon: "success",
+        confirmButtonText: "Ok",
+        allowOutsideClick: false,
+        allowEscapeKey: false,
+        allowEnterKey: false,
+        showConfirmButton: true,
+        confirmButtonColor: '#00AEDD',
+        showCloseButton: true
+    })
+    }else {
+    Swal.fire({
+        title: "Error",
+        text: "Los campos están incompletos",
+        icon: "error",
+        confirmButtonText: "Revisar",
+        allowOutsideClick: false,
+        allowEscapeKey: false,
+        allowEnterKey: false,
+        showConfirmButton: true,
+        confirmButtonColor: '#EC1C24',
+        showCloseButton: true
+    });
+    return false;
     }
 });
