@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Sistemas">
+    <meta name="theme-color" content="#00AEDD">
+    <link rel="stylesheet" href="Assets/css/styles.css">
+    <link rel="stylesheet" href="Assets/css/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="shorcut icon" href="Assets/images/icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title> Facturación | FarmAnimals </title>
+</head>
+<body>
+
+    <div class="container-form">
+        <div class="forms-container contenedor">
+            <div class="signin-signup">
+                <!-- Iniciar Sesión -->
+                <form action="" class="sign-in-form form" id="sign-in-form">
+                    <img src="Assets/images/logo2.png" class="LogoFarma" alt="Logo Farmanimals">
+                    <h2 class="title-form-h2">"Acceso"</h2>
+                    <!-- Grupo: RFC -->
+                    <div class="formulario__grupo" id="grupo__rfc">
+                        <label for="rfc" class="formulario__label">RFC</label>
+                        <div class="formulario__grupo-input">
+                            <input type="text" class="formulario__input rfc" name="rfc" id="rfc" placeholder="OIK08111HRFCE">
+                            <i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
+                        </div>
+                        <p class="formulario__input-error">El RFC abarca de 12-13 dígitos</p>
+                    </div>
+                    
+                    <!-- Grupo: Password -->
+                    <div class="formulario__grupo" id="grupo__password">
+                        <label for="password" class="formulario__label">Contraseña</label>
+                        <div class="formulario__grupo-input">
+                            <input type="password" class="formulario__input" name="password" id="password">
+                            <i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
+                        </div>
+                        <p class="formulario__input-error">La contraseña contener de 4-15 dígitos.</p>
+                    </div>
+                    <!-- Mensaje de Warning -->
+                    <div class="formulario__mensaje" id="formulario__mensaje">
+                        <p><i class="fa-sharp fa-solid fa-triangle-exclamation"></i> <b>Error:</b> Por favor rellena el formulario correctamente. </p>
+                    </div>
+
+                    <a href="views/forgotPassword.html" class="forgot">Olvidaste Contraseña?</a>
+
+                    <!-- Boton de Acceder -->
+                    <input type="submit" value="Acceder" class="btn-access solid">
+    
+                    <p class="social-text">Siguenos en las siguiente plataformas</p>
+                    <div class="social-media">
+                        <a href="#" class="social-icon"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                </form>
+    
+                <!-- Nuevo Usuario -->
+                <form action="" class="sign-up-form form" id="sign-up-form">
+                    <h2 class="title-form-h2">Registrarse</h2> 
+                    <div class="form-news">
+                        <!-- Grupo: Nombre/Razón Social -->
+                        <div class="formulario__grupo" id="grupo__nrs">
+                            <label for="nrs" class="formulario__label">Nombre/Razón Social</label>
+                            <div class="formulario__grupo-input">
+                                <input type="text" class="formulario__input nrs" name="nrs" id="nrs" placeholder="Name/Veterinaria">
+                                <i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
+                            </div>
+                            <p class="formulario__input-error">Debes colocar un Nombre/Razón Social.</p>
+                        </div>
+                        <!-- Grupo: RFC -->
+                        <div class="formulario__grupo" id="grupo__rfcc">
+                            <label for="rfcc" class="formulario__label">RFC</label>
+                            <div class="formulario__grupo-input">
+                                <input type="text" class="formulario__input rfc" name="rfcc" id="rfcc" placeholder="OIK08111HRFCE">
+                                <i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
+                            </div>
+                            <p class="formulario__input-error">El RFC abarca de 12-13 dígitos.</p>
+                        </div>
+                        <!-- Grupo: Regimen Fiscal -->
+                        <div class="formulario__grupo" id="grupo__regimen">
+                            <label for="regimen" class="formulario__label">Regimen Fiscal</label>
+                            <div class="formulario__grupo-input">
+                                <input type="text" class="formulario__input regimen" name="regimen" id="regimen">
+                                <i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
+                            </div>
+                            <p class="formulario__input-error">Elige una opción...</p>
+                        </div>
+                        <!-- Grupo: C.P. -->
+                        <div class="formulario__grupo" id="grupo__cp">
+                            <label for="cp" class="formulario__label">C.P. </label>
+                            <div class="formulario__grupo-input">
+                                <input type="number" class="formulario__input cp" name="cp" id="cp" placeholder="00000">
+                                <i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
+                            </div>
+                            <p class="formulario__input-error">El Código Postal es de 5 dígitos máximo.</p>
+                        </div>
+                        <!-- Grupo: Contraseña -->
+                        <div class="formulario__grupo" id="grupo__passwordd">
+                            <label for="password" class="formulario__label">Contraseña</label>
+                            <div class="formulario__grupo-input">
+                                <input type="password" class="formulario__input" name="passwordd" id="passwordd">
+                                <i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
+                            </div>
+                            <p class="formulario__input-error">La contraseña contener de 4-15 dígitos.</p>
+                        </div>
+                        <!-- Grupo: Confirmar Contraseña -->
+                        <div class="formulario__grupo" id="grupo__password2">
+                            <label for="password2" class="formulario__label">Confirmar Contraseña</label>
+                            <div class="formulario__grupo-input">
+                                <input type="password" class="formulario__input" name="password2" id="password2">
+                                <i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
+                            </div>
+                            <p class="formulario__input-error">Las contraseñas deben coincidir.</p>
+                        </div>
+                        <!-- Grupo: Correo Electrónico -->
+                        <div class="formulario__grupo" id="grupo__email">
+                            <label for="email" class="formulario__label">Correo Electrónico</label>
+                            <div class="formulario__grupo-input">
+                                <input type="email" class="formulario__input" name="email" id="email" placeholder="email@example.com">
+                                <i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
+                            </div>
+                            <p class="formulario__input-error">La contraseña contener de 4-15 dígitos.</p>
+                        </div>
+                        <!-- Grupo: Uso del CFDI -->
+                        <!-- <div class="input-field">
+                            <i class="fa-solid fa-box-archive"></i>
+                            <input type="text" placeholder="CFDI">
+                        </div> -->
+                    </div>
+                    <input type="submit" value="Crear" class="btn-access solid">
+    
+                    <p class="social-text">Siguenos en las siguiente plataformas</p>
+                    <div class="social-media">
+                        <a href="#" class="social-icon"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="panels-container">
+            <!-- Diseño de Acceso -->
+            <div class="panel left-panel">
+                <div class="content">
+                    <h3 class="title-h3">Registrarme</h3>
+                    <p class="text-form">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero, debitis in non nesciunt suscipit totam laboriosam sapiente adipisci dolorem dolore ea quaerat molestias, natus deserunt explicabo culpa quae tempore officia.</p>
+                    <button class="btn-access transparent" id="sign-up-btn">Nuevo</button>
+                </div>
+
+                <img src="Assets/images/uploads/undraw_passing_by_0un9 (1).svg" class="image-form" alt="Imagen de Decoración">
+            </div>
+
+            <!-- Diseño de Nuevo -->
+            <div class="panel right-panel">
+                <div class="content">
+                    <h3 class="title-h3">Tengo cuenta</h3>
+                    <p class="text-form">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero, debitis in non nesciunt suscipit totam laboriosam sapiente adipisci dolorem dolore ea quaerat molestias, natus deserunt explicabo culpa quae tempore officia.</p>
+                    <button class="btn-access transparent" id="sign-in-btn">Acceder</button>
+                </div>
+
+                <img src="Assets/images/uploads/undraw_relaxing_walk_re_7fko.svg" class="image-form" alt="Imagen de Decoración">
+            </div>
+        </div>
+    </div>
+
+    <script src="Assets/js/animationForms.js"></script>
+    <script src="Assets/js/forms.js"></script>
+    <script src="Assets/js/formsNew.js"></script>
+</body> 
+</html>
