@@ -8,6 +8,7 @@
     <meta name="theme-color" content="#00AEDD">
     <link rel="stylesheet" href="Assets/css/styles.css">
     <link rel="stylesheet" href="Assets/css/normalize.css">
+    <!-- <link rel="stylesheet" href="Assets/css/main.css"> -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="shorcut icon" href="Assets/images/icon.png">
@@ -87,11 +88,37 @@
                         <div class="formulario__grupo" id="grupo__regimen">
                             <label for="regimen" class="formulario__label">Regimen Fiscal</label>
                             <div class="formulario__grupo-input">
-                                <input type="text" class="formulario__input regimen" name="regimen" id="regimen">
-                                <i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
+                                <select class="formulario__input" id="regimen" multiple="" name="regimen">
+                                    <optgroup label="Selecciona una opción">
+                                    <option>General de Ley Personas Morales</option>
+                                    <option>Personas Morales con Fines no Lucrativos</option>
+                                    <option>Sueldos y Salarios e Ingresos Asimilados a Salarios</option>
+                                    <option>Arrendamiento</option>
+                                    <option>Régimen de Enajenación o Adquisición de Bienes</option>
+                                    <option>Demás ingresos</option>
+                                    <option>Residentes en el Extranjero sin Establecimiento Permanente en México</option>
+                                    <option>Ingresos por Dividendos (socios y accionistas)</option>
+                                    <option>Personas Físicas con Actividades Empresariales y Profesionales</option>
+                                    <option>Ingresos por intereses</option>
+                                    <option>Régimen de los ingresos por obtención de premios</option>
+                                    <option>Sin obligaciones fiscales</option>
+                                    <option>Sociedades Cooperativas de Producción que optan por diferir sus ingresos</option>
+                                    <option>Incorporación Fiscal</option>
+                                    <option>Actividades Agrícolas, Ganaderas, Silvícolas y Pesqueras</option>
+                                    <option>Opcional para Grupos de Sociedades</option>
+                                    <option>Coordinados</option>
+                                    <option>Régimen de las Actividades Empresariales con ingresos a través de Plataformas Tecnológicas</option>
+                                    <option>Régimen Simplificado</option>
+                                    <option>Hidrocarburos</option>
+                                    <option>De los Régimenes Fiscales Preferentes y de las Empresas Multinacionales</option>
+                                    <option>Enajenación de acciones en bolsa de valores</option>
+                                    </optgroup>
+              		            </select>
+                                  <i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
                             </div>
-                            <p class="formulario__input-error">Elige una opción...</p>
+                            <p class="formulario__input-error">Debes elegir una opción.</p>
                         </div>
+
                         <!-- Grupo: C.P. -->
                         <div class="formulario__grupo" id="grupo__cp">
                             <label for="cp" class="formulario__label">C.P. </label>
@@ -170,10 +197,13 @@
         </div>
     </div>
 
+    <script src="Assets/js/plugins/jquery-3.5.1.js"></script>
     <script src="Assets/js/animationForms.js"></script>
     <script src="Assets/js/forms.js"></script>
     <script src="Assets/js/formsNew.js"></script>
     <script src="/Assets/js/plugins/sweetalert2.all.min.js"></script>
-
+    <!-- DemoSelect -->
+    <script src="Assets/js/plugins/select2.min.js"></script>
+    <script src="Assets/js/demoSelect2.js"></script>
 </body> 
 </html>

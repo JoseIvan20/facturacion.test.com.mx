@@ -1,0 +1,1 @@
+$('#regimen').select2();

@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="/Assets/css/styles.css">
     <link rel="stylesheet" href="/Assets/css/normalize.css">
     <link rel="stylesheet" href="/Assets/css/util.css">
+    <link rel="stylesheet" href="/Assets/css/bootstrap.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="stylesheet" href="/Assets/vendor/css-hamburgers/hamburgers.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -35,15 +36,10 @@
                 <i class="fa-solid fa-envelope"></i>&nbsp;&nbsp;&nbsp;
                             Correo
                         </a>
-              <a href="#help" class="flex-c-m trans-04 p-lr-25">
+              <a href="" class="flex-c-m trans-04 p-lr-25"data-bs-toggle="modal" data-bs-target="#miHelp">
                 <i class="fa-solid fa-question"></i>&nbsp;&nbsp;&nbsp;
                 Help & FAQs
               </a>
-              
-              <a href="Views/agendarCita.html" class="flex-c-m trans-04 p-lr-25">
-                <i class="fa-solid fa-phone"></i>&nbsp;&nbsp;&nbsp;
-                            5516474137
-                        </a>
                     </div>
                 </div>
             </div>
@@ -108,7 +104,7 @@
             <ul class="topbar-mobile">
                 <li>
                     <div class="left-top-bar">
-                        Cuidado preventivo para tu fiel amigo, la atención que merece a un super precio <strong>Consulta básica $99.00 </strong>
+                        Bienvenido: </strong>
                     </div>
                 </li>
     
@@ -118,15 +114,10 @@
                             <i class="fa-solid fa-envelope"></i>&nbsp;&nbsp;&nbsp;
                                         Correo
                                     </a>
-                          <a href="#help" class="flex-c-m trans-04 p-lr-25">
+                          <a href="" class="flex-c-m trans-04 p-lr-25" data-bs-toggle="modal" data-bs-target="#miHelp">
                             <i class="fa-solid fa-question"></i>&nbsp;&nbsp;&nbsp;
                             Help & FAQs
                           </a>
-                          
-                          <a href="Views/agendarCita.html" class="flex-c-m trans-04 p-lr-25">
-                            <i class="fa-solid fa-phone"></i>&nbsp;&nbsp;&nbsp;
-                                        5516474137
-                                    </a>
                     </div>
                 </li>
             </ul>
@@ -168,7 +159,7 @@
         <section class="texts-se">
             <h1 class="title-1">Servicio de <strong class="title-2">Facturación</strong><h3 class="title-3">en línea</h3></h1>
             <div class="texts-paragraph">
-                <h4 class="subtitle-se">Tengo cuenta</h4>
+                <h4 class="subtitle-se">Buscar Ticket</h4>
                 <p class="paragraph__search">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam dolor alias, asperiores obcaecati sint iure corporis laudantium, optio corrupti fugit reiciendis esse itaque. Tenetur neque beatae repudiandae quos reprehenderit omnis.</p>
             </div>
 
@@ -193,7 +184,9 @@
                         <p class="formulario__input-error">Coloca un PIN de 3 dígitos.</p>
                     </div>
                 </div>
-                <input type="submit" value="Crear" class="btn-access solid">
+                <div class="button-search">
+                    <input type="submit" value="Buscar" class="btn-access-search solid">
+                </div>
             </form>
         </section>
         <section class="image-search">
@@ -202,12 +195,31 @@
         </section>
         <section class="social__media-search">
             <ul class="sci">
-                <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                <li><a href="https://www.facebook.com/FARMANIMALSMX/"><i class="fa-brands fa-facebook-f"></i></a></li>
                 <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
                 <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
             </ul>
         </section>
     </div>
+    <!-- Modal -->
+    <div class="modal fade" id="miHelp" tabindex="-1" aria-labelledby="modalFAQS" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalFAQS">Help & FAQs</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <h1 class="title__modal-dudas">Dudas</h1>
+              <p class="paragraph__modal">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta necessitatibus blanditiis ducimus commodi minima atque. Dignissimos adipisci odit voluptates sunt molestias exercitationem deserunt dolore fuga et. Ipsam dolorem sunt vitae</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Salir</button>
+              <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+            </div>
+          </div>
+        </div>
+      </div>
 
 
     <script src="/Assets/vendor/jquery/jquery-3.2.1.min.js"></script>
@@ -215,5 +227,7 @@
     <script src="/Assets/js/main.js"></script>
     <script src="/Assets/js/formSearch.js"></script>
     <script src="/Assets/js/plugins/sweetalert2.all.min.js"></script>
+    <!-- Botstrap - Modal -->
+    <script src="/Assets/js/plugins/bootstrap.bundle.min.js"></script>
 </body>
 </html>

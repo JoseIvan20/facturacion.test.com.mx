@@ -43,6 +43,10 @@ const FORMULARIONUEVO = (e) => {
         case "email":
             VALIDARCAMPOSNEW(EXPRESIONESNEW.email, e.target, 'email');
         break;
+
+        case "regimen": 
+            validarSelect2();
+        break;
     }
 }
 
@@ -92,6 +96,26 @@ const validarPassword2 = () => {
 	}
 }	
 
+const validarSelect2 = () =>{
+    const inputSelect = document.getElementById('regimen');
+
+    if (inputSelect.value) {
+        document.getElementById(`grupo__regimen`).classList.add('formulario__grupo-incorrecto');
+        document.getElementById(`grupo__regimen`).classList.remove('formulario__grupo-incorrecto');
+        document.querySelector(`#grupo__regimen i`).classList.add('fa-circle-xmark');
+        document.querySelector(`#grupo__regimen i`).classList.remove('fa-circle-check');
+        document.querySelector(`#grupo__regimen .formulario__input-error`).classList.add('formulario__input-error-activo');
+        campos['regimen'] = false;
+    }else {
+        document.getElementById(`grupo__regimen`).classList.remove('formulario__grupo-incorrecto');
+        document.getElementById(`grupo__regimen`).classList.add('formulario__grupo-incorrecto');
+        document.querySelector(`#grupo__regimen i`).classList.remove('fa-circle-xmark');
+        document.querySelector(`#grupo__regimen i`).classList.add('fa-circle-check');
+        document.querySelector(`#grupo__regimen .formulario__input-error`).classList.remove('formulario__input-error-activo');
+        campos['regimen'] = true;
+    }
+}
+
 INPUTSNEW.forEach((inputs) => {
     /* Cuando el usuario presiona una tecla, al momento de soltarla se ejecutara un codigo **/
     inputs.addEventListener('keyup', FORMULARIONUEVO);
@@ -101,6 +125,7 @@ INPUTSNEW.forEach((inputs) => {
 
 FORMNEW.addEventListener('submit', (e) => {
     e.preventDefault();
+
     // if (camposNew.nrs && camposNew.rfcc && camposNew.cp && camposNew.passwordd && camposNew.password2 && camposNew.email) {
     //     FORMNEW.reset();
     // }
@@ -109,8 +134,9 @@ FORMNEW.addEventListener('submit', (e) => {
     var strCP = document.querySelector('#cp').value;
     var strPASSWORDD = document.querySelector('#passwordd').value;
     var strEMAIL = document.querySelector('#email').value;
+    var strSELECT2 = document.querySelector('#regimen').value;
 
-    if (strNRS && strRFCC && strCP && strPASSWORDD && strEMAIL) {
+    if (strNRS && strRFCC && strCP && strPASSWORDD && strEMAIL && strSELECT2) {
     Swal.fire({
         title: "Éxito",
         text: "Los campos han sido registrados.",
